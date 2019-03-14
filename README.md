@@ -9,7 +9,7 @@ Official tensorflow implementation of **SELFIE**. Specifically, in this implemen
 Owing to the extremely high expressive power of deep neural networks, their side effect is to totally memorize training data even when the labels are extremely noisy. To overcome overfitting on the noisy labels, we propose a novel robust training method, which we call **SELFIE**, that trains the network on precisely calibrated samples together with clean samples. As in below Figure, it *selectively* corrects the losses of the training samples classified as *refurbishable* and combines them with the losses of clean samples to propagate backward. Taking advantage of this design, **SELFIE** effectively prevents the risk of noise accumulation from the false correction and fully exploits the training data.
 
 <p align="center">
-<img src="figures/key_idea.png " width="450"> 
+<img src="figures/key_idea.png " width="400"> 
 </p>
 
 ## 2. Implementation
