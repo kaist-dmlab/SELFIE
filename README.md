@@ -12,6 +12,8 @@ Owing to the extremely high expressive power of deep neural networks, their side
 <img src="figures/key_idea.png " width="450"> 
 </p>
 
+Our concept can be achievied by a simple modification of the gradient decent process. 
+
 ## 2. Algorithms
 
 ## 3. Data Sets
