@@ -62,7 +62,7 @@ record.image = tf.transpose(depth_major_image, [1, 2, 0])
 ## 6. Tutorial
 
 ## 7. Reference
-[1] Huang, G. et al. Densely connected convolutional networks. In CVPR, 2017.</br>
-[2] Simonyan, K. et al. Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556, 2014.</br>
-[3] Chang, H.-S. et al. Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS, 2017.</br>
-[4] Han, B. et al. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS, 2018.</br>
+[1] Huang et al., 2017, Densely connected convolutional networks. In CVPR.</br>
+[2] Simonyan et al., 2014, Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556.</br>
+[3] Chang et al., 2017, Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS.</br>
+[4] Han et al., 2018, Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS.</br>
