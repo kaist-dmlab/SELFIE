@@ -12,9 +12,11 @@ Official tensorflow implementation of *SELFIE*. Specifically, in this implementa
 ## 3. Data Sets
 | Name           | # Training Images | # Testing Images  | # Classes |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:-------:|
-| CIFAR-10       | 50,000            | 10,000            | 10        | [link](http://www.microsoft.com/en-us/download/) |
-| CIFAR-100      | 50,000            | 10,000            | 100       | [link](http://nuage.cs.washington.edu/benchmark/astro-nbody/) |
-| Tiny-ImageNet  | 100,000           | 10,000            | 200       | [link](http://blog.openstreetmap.org/2012/04/01/bulk-gps-point-data/) |
+| CIFAR-10       | 50,000            | 10,000            | 10        | [link](http://www.dropbox.com/) |
+| CIFAR-100      | 50,000            | 10,000            | 100       | [link](http://www.dropbox.com/) |
+| Tiny-ImageNet  | 100,000           | 10,000            | 200       | [link](http://www.dropbox.com/) |
+
+For ease of experimentation, we provide download links for all datasets converted to binary format.
 
 ## 4. Configuration
 
