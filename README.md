@@ -18,7 +18,8 @@ Official tensorflow implementation of *SELFIE*. Specifically, in this implementa
 
 For ease of experimentation, we provide download links for all datasets converted to the binary version. 
 ```
-The binary version contains the files data_batch_1.bin, data_batch_2.bin, ..., as well as test_batch.bin. Each of these files is formatted as follows:
+The binary version contains the files data_batch_1.bin, data_batch_2.bin, ..., as well as test_batch.bin. 
+Each of these files is formatted as follows:
 <1 x label><3072 x pixel>
 ...
 <1 x label><3072 x pixel>
