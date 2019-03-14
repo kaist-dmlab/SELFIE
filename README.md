@@ -27,7 +27,7 @@ Each of these files is formatted as follows:
 
 The reading procedure is similar to that of a popular [CIFAR-10 tutorial](https://github.com/tensorflow/models/blob/master/tutorials/image/cifar10/cifar10_input.py).
 ```python
-# you can read our bianry files as below: 
+# You can read our bianry files as below: 
 ID_BYTES = 4
 LABEL_BYTES = 4
 RECORD_BYTES = ID_BYTES + LABEL_BYTES + width * height * depth
