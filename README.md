@@ -20,9 +20,21 @@ For ease of experimentation, we provide download links for all datasets converte
 ```
 The binary version contains the files data_batch_1.bin, data_batch_2.bin, ..., as well as test_batch.bin. 
 Each of these files is formatted as follows:
-<1 x label><3072 x pixel>
+<id><label><width x height x depth>
 ...
-<1 x label><3072 x pixel>
+<id><label><depth x width x height>
+```
+```python
+# you can read this bianry file as below:
+ID_BYTES = 4
+LABEL_BYTES = 4
+RECORD_BYTES = ID_BYTES + LABEL_BYTES + width * height * depth
+byte_record = tf.decode_raw(value, tf.uint8)
+image_id = tf.strided_slice(byte_record, [0], [ID_BYTES])
+image_label = tf.strided_slice(byte_record, [ID_BYTES], [ID_BYTES + LABEL_BYTES])
+array_image = tf.strided_slice(byte_record, [ID_BYTES + LABEL_BYTES], [RECORD_BYTES])
+depth_major_image = tf.reshape(array_image, [depth, height, width])
+record.image = tf.transpose(depth_major_image, [1, 2, 0])
 ```
 
 ## 4. Configuration
