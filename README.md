@@ -20,6 +20,10 @@ Owing to the extremely high expressive power of deep neural networks, their side
 </p>
 
 ## 2. Compared Algorithms
+We compared **SELFIE** with two state-of-the-art robust training methods. We also provides official and unofficial implementations of each method.
+- *Active Bias* [(Chang et al., NIPS 2017)](http://papers.nips.cc/paper/6701-active-bias-training-more-accurate-neural-networks-by-emphasizing-high-variance-samples): [unofficial (Tensorflow)](https://github.com/songhwanjun/ActiveBias)
+- *Co-teaching* [(Han et al., NIPS 2018)](http://papers.nips.cc/paper/8072-co-teaching-robust-training-of-deep-neural-networks-with-extremely-noisy-labels): [official (Pytorch)](https://github.com/bhanML/Co-teaching) and [unofficial (Tensorflow)](https://github.com/songhwanjun/Co-teaching)
+
 
 ## 3. Data Sets
 | Name           | # Training Images | # Testing Images  | # Classes |  Link   |
