@@ -24,6 +24,12 @@ We compared **SELFIE** with two state-of-the-art robust training methods. We als
 - *Active Bias* [3]: [unofficial (Tensorflow)](https://github.com/songhwanjun/ActiveBias)
 - *Co-teaching* [4]: [official (Pytorch)](https://github.com/bhanML/Co-teaching) and [unofficial (Tensorflow)](https://github.com/songhwanjun/Co-teaching)
 
+>__*Reference*__</br>
+[1] Huang, G., Liu, Z., Van Der Maaten, L., and Weinberger, K. Q. Densely connected convolutional networks. In CVPR, pp. 4700–4708, 2017.</br>
+[2] Simonyan, K., and Zisserman, A. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556, 2014.</br>
+[3] Chang, H.-S., Learned-Miller, E., and McCallum, A. Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS, pp. 1002–1012, 2017.</br>
+[4] Han, B., Yao, Q., Yu, X., Niu, G., Xu, M., Hu, W., Tsang, I., and Sugiyama, M. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS, pp. 8536–8546, 2018.</br>
+
 ## 3. Benchmark Datasets
 | Name           | # Training Images | # Testing Images  | # Classes |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:-------:|
@@ -62,8 +68,4 @@ record.image = tf.transpose(depth_major_image, [1, 2, 0])
 
 ## 6. Tutorial
 
->__*Reference*__</br>
-[1] Huang, G., Liu, Z., Van Der Maaten, L., and Weinberger, K. Q. Densely connected convolutional networks. In CVPR, pp. 4700–4708, 2017.</br>
-[2] Simonyan, K., and Zisserman, A. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556, 2014.</br>
-[3] Chang, H.-S., Learned-Miller, E., and McCallum, A. Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS, pp. 1002–1012, 2017.</br>
-[4] Han, B., Yao, Q., Yu, X., Niu, G., Xu, M., Hu, W., Tsang, I., and Sugiyama, M. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS, pp. 8536–8546, 2018.</br>
+
