@@ -13,7 +13,7 @@ Owing to the extremely high expressive power of deep neural networks, their side
 </p>
 
 ## 2. Implementation
-**SELFIE** requires only a simple modification in the gradient descent step. As described below, the conventional update equation is replaced with the proposed one. If you are interested in further details, refer our paper.
+**SELFIE** requires only a simple modification in the gradient descent step. As described below, the conventional update equation is replaced with the proposed one. If you are interested in further details, read our paper.
 
 <p align="center">
 <img src="figures/update_equation.png " width="850"> 
