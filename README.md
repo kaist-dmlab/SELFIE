@@ -12,7 +12,7 @@ Official tensorflow implementation of *SELFIE*. Specifically, in this implementa
 ## 3. Data Sets
 | Name           | # Training Images | # Testing Images  | # Classes |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:-------:|
-| CIFAR-10       | 50,000            | 10,000            | 10        | [link](http://www.dropbox.com/) |
+| CIFAR-10       | 50,000            | 10,000            | 10        | [link](https://drive.google.com/drive/folders/1q8zYWwB5gOMJm35XgcMd0zpxwmgEFlCi?usp=sharing) |
 | CIFAR-100      | 50,000            | 10,000            | 100       | [link](http://www.dropbox.com/) |
 | Tiny-ImageNet  | 100,000           | 10,000            | 200       | [link](http://www.dropbox.com/) |
 
