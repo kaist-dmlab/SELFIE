@@ -25,7 +25,7 @@ Each of these files is formatted as follows:
 <id><label><depth x width x height>
 ```
 
-The reading procedure is similar to the popular [CIFAR-10 tutorial](https://github.com/tensorflow/models/blob/master/tutorials/image/cifar10/cifar10_input.py).
+The reading procedure is similar to that of a popular [CIFAR-10 tutorial](https://github.com/tensorflow/models/blob/master/tutorials/image/cifar10/cifar10_input.py).
 ```python
 # you can read our bianry files as below: 
 ID_BYTES = 4
