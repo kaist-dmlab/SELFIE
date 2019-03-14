@@ -20,12 +20,11 @@ Owing to the extremely high expressive power of deep neural networks, their side
 </p>
 
 ## 2. Compared Algorithms
-We compared **SELFIE** with two state-of-the-art robust training methods. We also provides official and unofficial implementations of each method.
+We compared **SELFIE** with two state-of-the-art robust training methods. We also provides the links of official/unofficial implementations for each method.
 - *Active Bias* [3]: [unofficial (Tensorflow)](https://github.com/songhwanjun/ActiveBias)
 - *Co-teaching* [4]: [official (Pytorch)](https://github.com/bhanML/Co-teaching) and [unofficial (Tensorflow)](https://github.com/songhwanjun/Co-teaching)
 
-
-## 3. Data Sets
+## 3. Benchmark Datasets
 | Name           | # Training Images | # Testing Images  | # Classes |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:-------:|
 | CIFAR-10       | 50,000            | 10,000            | 10        | [link](https://drive.google.com/drive/folders/1q8zYWwB5gOMJm35XgcMd0zpxwmgEFlCi?usp=sharing) |
