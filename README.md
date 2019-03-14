@@ -7,7 +7,7 @@ Official tensorflow implementation of *SELFIE*. Specifically, in this implementa
 
 ## 1. Overview
 <p align="center">
-<img src="figures/key_idea.png " width="350"> 
+<img src="figures/key_idea.png " width="450"> 
 </p>
 
 ## 2. Algorithms
