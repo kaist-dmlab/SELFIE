@@ -31,6 +31,8 @@ The reading procedure is similar to that of a popular [CIFAR-10 tutorial](https:
 ID_BYTES = 4
 LABEL_BYTES = 4
 RECORD_BYTES = ID_BYTES + LABEL_BYTES + width * height * depth
+reader = tf.FixedLengthRecordReader(record_bytes=RECORD_BYTES)
+file_name, value = reader.read(filename_queue)
 byte_record = tf.decode_raw(value, tf.uint8)
 image_id = tf.strided_slice(byte_record, [0], [ID_BYTES])
 image_label = tf.strided_slice(byte_record, [ID_BYTES], [ID_BYTES + LABEL_BYTES])
