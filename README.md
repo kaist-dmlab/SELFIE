@@ -55,10 +55,9 @@ array_image = tf.strided_slice(byte_record, [ID_BYTES + LABEL_BYTES], [RECORD_BY
 depth_major_image = tf.reshape(array_image, [depth, height, width])
 record.image = tf.transpose(depth_major_image, [1, 2, 0])
 ```
-
 ## 4. Configuration
 
-## 5. How to run
+## 5. Performance
 
 ## 6. Tutorial
 
