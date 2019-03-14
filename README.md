@@ -20,7 +20,7 @@ For ease of experimentation, we provide download links for all datasets converte
 ```
 The binary version contains the files data_batch_1.bin, data_batch_2.bin, ..., as well as test_batch.bin. 
 Each of these files is formatted as follows:
-<id><label><width x height x depth>
+<id><label><depth x width x height>
 ...
 <id><label><depth x width x height>
 ```
