@@ -12,9 +12,11 @@ Owing to the extremely high expressive power of deep neural networks, their side
 <img src="figures/key_idea.png " width="450"> 
 </p>
 
-Our concept can be achievied by a simple modification of the gradient decent process. 
+## 2. Implementation
+**SELFIE** requires only a simple modification in the gradient descent step. As shown below, the conventional update equation is replaced with the proposed one. If you want to know further details, see our paper.
 
-## 2. Algorithms
+
+## 2. Compared Algorithms
 
 ## 3. Data Sets
 | Name           | # Training Images | # Testing Images  | # Classes |  Link   |
