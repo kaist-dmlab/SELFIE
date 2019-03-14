@@ -16,7 +16,7 @@ Owing to the extremely high expressive power of deep neural networks, their side
 **SELFIE** requires only a simple modification in the gradient descent step. As shown below, the conventional update equation is replaced with the proposed one. If you want to know further details, See our paper.
 
 <p align="center">
-<img src="figures/update_equation.png " width="450"> 
+<img src="figures/update_equation.png " width="650"> 
 </p>
 
 ## 2. Compared Algorithms
