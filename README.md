@@ -27,7 +27,7 @@ We compared **SELFIE** with two state-of-the-art robust training methods. We als
 ## 3. Benchmark Datasets
 We evaluated the performance of **SELIFE** on *four* benchmark datasets.
 
-| Name           | # Training Images | # Testing Images  | # Classes |  Resolution |  Link   |
+| Name (clean or noisy)    | # Training Images | # Testing Images  | # Classes |  Resolution |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:----------:|:-------:|
 | CIFAR-10 (clean)       | 50,000            | 10,000            | 10        |    32x32   | [link](https://drive.google.com/open?id=1ipishY18dUv7aopE36gicbNYhk9E9nHx) |
 | CIFAR-100 (clean)     | 50,000            | 10,000            | 100       |    32x32   | [link](https://drive.google.com/drive/u/1/folders/1F3QE7E6-fqA1xo9wDT1VwiYRS4UYlG-X) |
