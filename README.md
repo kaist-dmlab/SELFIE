@@ -59,6 +59,9 @@ depth_major_image = tf.reshape(array_image, [depth, height, width])
 record.image = tf.transpose(depth_major_image, [1, 2, 0])
 ```
 ## 4. Noise Injection
+Except ANIMAL-10N dataset, since all data sets are clean, we artifically corrupted CIFAR-10, CIFAR-100 and Tiny-ImageNet datasets using a typical method for the evaluation of noisy labels. 
+
+
 
 ## 5. Configuration
 
