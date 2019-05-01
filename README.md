@@ -27,11 +27,12 @@ We compared **SELFIE** with two state-of-the-art robust training methods. We als
 ## 3. Benchmark Datasets
 We evaluated the performance of **SELIFE** on *four* benchmark datasets.
 
-| Name           | # Training Images | # Testing Images  | # Classes |  Link   |
-| :------------: | :---------------: | :---------------: |:---------:|:-------:|
-| CIFAR-10       | 50,000            | 10,000            | 10        | [link](https://drive.google.com/drive/folders/1q8zYWwB5gOMJm35XgcMd0zpxwmgEFlCi?usp=sharing) |
-| CIFAR-100      | 50,000            | 10,000            | 100       | [link](https://drive.google.com/drive/folders/1gMikxSdScmQxGxfjwtgOXYeGvWKcx8eN?usp=sharing) |
-| Tiny-ImageNet  | 100,000           | 10,000            | 200       | [link](https://drive.google.com/drive/folders/1DMfyB8soRKGfR5b_MDg4uQBTg8waX5Ew?usp=sharing) |
+| Name           | # Training Images | # Testing Images  | # Classes |  Resolution |  Link   |
+| :------------: | :---------------: | :---------------: |:---------:|:----------:|:-------:|
+| CIFAR-10       | 50,000            | 10,000            | 10        |    32x32   | [link](https://drive.google.com/drive/folders/1q8zYWwB5gOMJm35XgcMd0zpxwmgEFlCi?usp=sharing) |
+| CIFAR-100      | 50,000            | 10,000            | 100       |    32x32   | [link](https://drive.google.com/drive/folders/1gMikxSdScmQxGxfjwtgOXYeGvWKcx8eN?usp=sharing) |
+| Tiny-ImageNet  | 100,000           | 10,000            | 200       |    64x64   | [link](https://drive.google.com/drive/folders/1DMfyB8soRKGfR5b_MDg4uQBTg8waX5Ew?usp=sharing) |
+| Tiny-ImageNet  | 100,000           | 10,000            | 200       |    64x64   | [link](https://dm.kaist.ac.kr/dataset/animal-10n) |
 
 For ease of experimentation, we provide download links for all datasets converted to the binary version. 
 ```
@@ -57,13 +58,15 @@ array_image = tf.strided_slice(byte_record, [ID_BYTES + LABEL_BYTES], [RECORD_BY
 depth_major_image = tf.reshape(array_image, [depth, height, width])
 record.image = tf.transpose(depth_major_image, [1, 2, 0])
 ```
-## 4. Configuration
+## 4. Noise Injection
 
-## 5. Performance
+## 5. Configuration
 
-## 6. Tutorial
+## 6. Performance
 
-## 7. Reference
+## 7. Tutorial
+
+## 8. Reference
 [1] Huang et al., 2017, Densely connected convolutional networks. In CVPR.</br>
 [2] Simonyan et al., 2014, Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556.</br>
 [3] Chang et al., 2017, Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS.</br>
