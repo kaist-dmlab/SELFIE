@@ -63,7 +63,7 @@ Except ANIMAL-10N dataset, since all data sets are clean, we artifically corrupt
 - *Pair Noise*
 - *Symmetry Noise*
 
-As for *realistically noisy* ANIMAL-10N dataset, the noise rate of training data is found at *8%* by the corss-validation with grid search.
+As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search.
 
 
 ## 5. Configuration
