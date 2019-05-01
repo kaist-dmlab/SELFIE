@@ -29,8 +29,8 @@ We evaluated the performance of **SELIFE** on *four* benchmark datasets.
 
 | Name           | # Training Images | # Testing Images  | # Classes |  Resolution |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:----------:|:-------:|
-| CIFAR-10       | 50,000            | 10,000            | 10        |    32x32   | [link](https://drive.google.com/drive/folders/1q8zYWwB5gOMJm35XgcMd0zpxwmgEFlCi?usp=sharing) |
-| CIFAR-100      | 50,000            | 10,000            | 100       |    32x32   | [link](https://drive.google.com/drive/folders/1gMikxSdScmQxGxfjwtgOXYeGvWKcx8eN?usp=sharing) |
+| CIFAR-10       | 50,000            | 10,000            | 10        |    32x32   | [link](https://drive.google.com/open?id=1ipishY18dUv7aopE36gicbNYhk9E9nHx) |
+| CIFAR-100      | 50,000            | 10,000            | 100       |    32x32   | [link](https://drive.google.com/drive/u/1/folders/1F3QE7E6-fqA1xo9wDT1VwiYRS4UYlG-X) |
 | Tiny-ImageNet  | 100,000           | 10,000            | 200       |    64x64   | [link](https://drive.google.com/drive/folders/1DMfyB8soRKGfR5b_MDg4uQBTg8waX5Ew?usp=sharing) |
 | Tiny-ImageNet  | 100,000           | 10,000            | 200       |    64x64   | [link](https://dm.kaist.ac.kr/dataset/animal-10n) |
 
