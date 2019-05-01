@@ -64,14 +64,6 @@ Except ANIMAL-10N dataset, since all data sets are clean, we artifically corrupt
 <img src="figures/noise_type.png " width="500"> 
 </p>
 
-```python
-# You can easily inject the synthetic noise as below:
-# For pair noise
-
-# For symmetry noise
-
-```
-
 As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search.
 
 
