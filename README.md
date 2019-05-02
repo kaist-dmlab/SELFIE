@@ -91,7 +91,8 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 </p>
 
 ## 7. How to Run
-- Dataset download: download our datasets (binary format) and locate the dataset into dataset forder. 
+- Dataset download: 
+  - Download our datasets (binary format) and locate the dataset into **SELFIE/dataset/** (e.g., SELFIE/dataset/CIFAR-10).
 
 - Algorithm parameters
    ```
