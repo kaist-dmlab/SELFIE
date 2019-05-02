@@ -79,12 +79,12 @@ As for the algorithm hyperparameters, we fied *restart* to 2 and used the best u
 We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets.
 
 #### 6.1 Synthetic Noise (CIFAR-10/100, Tiny-ImageNet)
-- DenseNet (L=25, k=12).
+- DenseNet (L=25, k=12) on varying noise rates.
 <p align="center">
 <img src="figures/synthetic_densenet.png " width="650"> 
 </p>
 
-- VGG-19.
+- VGG-19 on varying noise rates.
 <p align="center">
 <img src="figures/synthetic_vggnet.png " width="650"> 
 </p>
