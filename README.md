@@ -65,7 +65,7 @@ Except ANIMAL-10N dataset, since all datasets are clean, we artifically corrupte
 <img src="figures/noise_type.png " width="500"> 
 </p>
 
-As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B in our paper).
+As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B).
 
 ## 5. Environment and Configuration
 - Python 3.6.4
@@ -76,7 +76,7 @@ In our paper, for the evaluation, we used a *momentum* of 0.9, a *batch size* of
 As for the algorithm hyperparameters, we fied *restart* to 2 and used the best uncertainty *threshold epsilon* = 0.05, *history length q* = 15, which were obtained using the grid search (See Section 4.5 in our paper).
 
 ## 6. Performance
-We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets.
+We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The detailed anaysis on the evalutaion is discussed in our paper.
 
 #### 6.1 Synthetic Noise (CIFAR-10/100, Tiny-ImageNet)
 - DenseNet (L=25, k=12) on varying noise rates.
@@ -85,12 +85,10 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets.
 </p>
 
 #### 6.2 Realistic Noise (ANIMAL-10N)
-- The noise rate of ANIMAL-10N is about 8% (See Appendix B in our paper). 
+- The noise rate of ANIMAL-10N is estimated at 8%.
 <p align="center">
 <img src="figures/realistic_performance.png " width="320"> 
 </p>
-
-
 
 ## 7. How to Run
 
