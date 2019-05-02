@@ -67,16 +67,22 @@ Except ANIMAL-10N dataset, since all datasets are clean, we artifically corrupte
 
 As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B in our paper).
 
-## 5. Environment 
+## 5. Environment and Configuration
 - Python 3.6.4
 - Tensorflow-gpu 1.8.0 (pip install tensorflow-gpu==1.8.0)
 - Tensorpack (pip install tensorpack)
 
-## 6. Configuration
 In our paper, for the evaluation, we used a *momentum* of 0.9, a *batch size* of 128, a *dropout* of 0.2, and *batch normalization*. For training schedule, we trained the network for *100 epochs* and used an *initial learning rate* of 0.1, which was divided by 5 at 50% and 75% of the toral number of epochs. 
 As for the algorithm hyperparameters, we fied *restart* to 2 and used the best uncertainty *threshold epsilon* = 0.05, *history length q* = 15, which were obtained using the grid search (See Section 4.5 in our paper).
 
 ## 6. Performance
+#### 6.1 Synthetic Noise
+- When using DenseNet (L=25, k=12)
+
+
+- When using VGG-19
+
+#### 6.2 Realistic Noise
 
 ## 7. How to Run
 
