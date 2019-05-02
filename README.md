@@ -62,7 +62,7 @@ record.image = tf.transpose(depth_major_image, [1, 2, 0])
 ## 4. Noise Injection
 Except ANIMAL-10N dataset, since all datasets are clean, we artifically corrupted CIFAR-10, CIFAR-100 and Tiny-ImageNet datasets using two typical methods such that the true label *i* is flipped into the corrupted label *j*: *i)* **Pair Noise** and *ii)* **Symmetry Noise**. Below figures show the example of the confusion matrix for each noise type.
 <p align="center">
-<img src="figures/noise_type.png " width="500"> 
+<img src="figures/noise_type.png " width="550"> 
 </p>
 
 As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B).
