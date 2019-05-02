@@ -91,6 +91,9 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 </p>
 
 ## 7. How to Run
+- Dataset download
+-- ddd
+
 - Algorithm parameters
    ```
     -gpu_id: gpu number which you want to use.
