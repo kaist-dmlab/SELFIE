@@ -104,11 +104,11 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
     -method_name: method in {Default, ActiveBias, Coteaching, SELFIE}.
     -noise_type: synthetic noise type in {pair, symmetry, none}.
     -noise_rate: the rate which you want to corrupt (for CIFAR-10/100, Tiny-ImageNet) or the true noise rate of dataset (for ANIMAL-10N).
-    -7. log_dir: log directory to save the training/test error.
+    -log_dir: log directory to save the training/test error.
    ```
    
 - Algorithm configuration
-   
+
    Data augmentation and distortion are not applied, and training paramters are set to:
    ```
    Training epochs: 100
@@ -118,6 +118,7 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 
 - Running commend
    ```python
+   python main.py gpu_id data model_name method_name noise_type noise_rate log_dir
    ```
 
    
