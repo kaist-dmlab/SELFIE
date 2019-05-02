@@ -83,6 +83,7 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets.
 <p align="center">
 <img src="figures/synthetic_densenet.png " width="650"> 
 </p>
+
 - VGG-19.
 <p align="center">
 <img src="figures/synthetic_vggnet.png " width="650"> 
