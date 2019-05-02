@@ -67,7 +67,12 @@ Except ANIMAL-10N dataset, since all datasets are clean, we artifically corrupte
 
 As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B in our paper).
 
-## 5. Configuration
+## 5. Environment 
+- Python 3.6.4
+- Tensorflow-gpu 1.8.0 (pip install tensorflow-gpu==1.8.0)
+- Tensorpack (pip install tensorpack)
+
+## 6. Configuration
 
 ## 6. Performance
 
