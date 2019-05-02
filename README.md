@@ -140,3 +140,6 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 [2] Simonyan et al., 2014, Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556.</br>
 [3] Chang et al., 2017, Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS.</br>
 [4] Han et al., 2018, Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS.</br>
+
+## 9. Contact
+Hwanjun Song (songhwanjun@kaist.ac.kr); Minseok Kim (minseokkim@kaist.ac.kr); Jae-gil Lee (jaegil@kaist.ac.kr)
