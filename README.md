@@ -71,7 +71,7 @@ As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training da
 
 ## 6. Performance
 
-## 7. How to Reproducing the Result
+## 7. How to Run
 
 ## 8. Reference
 [1] Huang et al., 2017, Densely connected convolutional networks. In CVPR.</br>
