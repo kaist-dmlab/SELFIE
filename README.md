@@ -121,10 +121,10 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
    python main.py gpu_id data model_name method_name noise_type noise_rate log_dir
    
    e.g. 1., train DenseNet (L=25, k=12) on CIFAR-100 with pair noise of 40%.
-   python main.py 0 "CIFAR-100" "DenseNet-25-12" "SELFIE" "pair" 0.4 "log/CIFAR-100/SELFIE"
+   # python main.py 0 CIFAR-100 DenseNet-25-12 SELFIE "pair" 0.4 log/CIFAR-100/SELFIE
    
    e.g. 2., train DenseNet (L=25, k=12) on ANIMAL-10N with realistical noise of 8%
-   python main.py 0 "ANIMAL-10N" "DenseNet-25-12" "SELFIE" "none" 0.08 "log/ANIMAL-10N/SELFIE"
+   # python main.py 0 ANIMAL-10N DenseNet-25-12 SELFIE "none" 0.08 log/ANIMAL-10N/SELFIE
    ```
 
    
