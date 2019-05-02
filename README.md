@@ -91,7 +91,31 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 </p>
 
 ## 7. How to Run
+- Algorithm parameters
+   ```
+    -1. gpu_id: gpu number which you want to use.
+    -2. data: directory name of dataset.
+    -3. model_name: model in {VGG-19, DenseNet-10-12, DenseNet-25-12, DenseNet-40-12}.
+    -4. method_name: method in {Default, ActiveBias, Coteaching, SELFIE}.
+    -5. noise_type: synthetic noise type in {pair, symmetry, none}.
+    -6. noise_rate: the rate which you want to corrupt (for CIFAR-10/100, Tiny-ImageNet) or the true noise rate of dataset (for ANIMAL-10N).
+    -7. log_dir: log directory to save the training/test error.
+   ```
+   
+- Algorithm configuration
+   
+   Data augmentation and distortion are not applied, and training paramters are set to:
+   ```
+   Training epochs: 100
+   Batch size: 128
+   Learning rate: 0.1 (divided 5 at the approximately 50% and approximately 75% of the total number of epochs)
+   ```
 
+- Running commend
+   ```python
+   ```
+
+   
 ## 8. Reference
 [1] Huang et al., 2017, Densely connected convolutional networks. In CVPR.</br>
 [2] Simonyan et al., 2014, Very deep convolutional networks for large-scale image recognition. arXiv:1409.1556.</br>
