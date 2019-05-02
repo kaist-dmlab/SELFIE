@@ -81,11 +81,11 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets.
 #### 6.1 Synthetic Noise (CIFAR-10/100, Tiny-ImageNet)
 - DenseNet (L=25, k=12).
 <p align="center">
-<img src="figures/synthetic_densenet.png " width="600"> 
+<img src="figures/synthetic_densenet.png " width="500"> 
 </p>
 - VGG-19.
 <p align="center">
-<img src="figures/synthetic_vggnet.png " width="600"> 
+<img src="figures/synthetic_vggnet.png " width="500"> 
 </p>
 #### 6.2 Realistic Noise (ANIMAL-10N)
 - The noise rate of ANIMAL-10N is about 8% (See Appendix B in our paper). 
