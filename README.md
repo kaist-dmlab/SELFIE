@@ -102,7 +102,7 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
     -data: directory name of dataset.
     -model_name: model in {VGG-19, DenseNet-10-12, DenseNet-25-12, DenseNet-40-12}.
     -method_name: method in {Default, ActiveBias, Coteaching, SELFIE}.
-    -noise_type: synthetic noise type in {pair, symmetry, none}.
+    -noise_type: synthetic noise type in {pair, symmetry, none}, none: do not inject synthetic noise.
     -noise_rate: the rate which you want to corrupt (for CIFAR-10/100, Tiny-ImageNet) or the true noise rate of dataset (for ANIMAL-10N).
     -log_dir: log directory to save the training/test error.
    ```
