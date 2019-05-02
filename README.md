@@ -93,12 +93,12 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 ## 7. How to Run
 - Algorithm parameters
    ```
-    -1. gpu_id: gpu number which you want to use.
-    -2. data: directory name of dataset.
-    -3. model_name: model in {VGG-19, DenseNet-10-12, DenseNet-25-12, DenseNet-40-12}.
-    -4. method_name: method in {Default, ActiveBias, Coteaching, SELFIE}.
-    -5. noise_type: synthetic noise type in {pair, symmetry, none}.
-    -6. noise_rate: the rate which you want to corrupt (for CIFAR-10/100, Tiny-ImageNet) or the true noise rate of dataset (for ANIMAL-10N).
+    -gpu_id: gpu number which you want to use.
+    -data: directory name of dataset.
+    -model_name: model in {VGG-19, DenseNet-10-12, DenseNet-25-12, DenseNet-40-12}.
+    -method_name: method in {Default, ActiveBias, Coteaching, SELFIE}.
+    -noise_type: synthetic noise type in {pair, symmetry, none}.
+    -noise_rate: the rate which you want to corrupt (for CIFAR-10/100, Tiny-ImageNet) or the true noise rate of dataset (for ANIMAL-10N).
     -7. log_dir: log directory to save the training/test error.
    ```
    
