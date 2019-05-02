@@ -65,14 +65,13 @@ Except ANIMAL-10N dataset, since all datasets are clean, we artifically corrupte
 <img src="figures/noise_type.png " width="500"> 
 </p>
 
-As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search.
-
+As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B in our paper).
 
 ## 5. Configuration
 
 ## 6. Performance
 
-## 7. Tutorial
+## 7. How to Reproducing the Result
 
 ## 8. Reference
 [1] Huang et al., 2017, Densely connected convolutional networks. In CVPR.</br>
