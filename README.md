@@ -73,7 +73,7 @@ As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training da
 - Tensorpack (pip install tensorpack)
 
 ## 6. Configuration
-In our paper, for the evaluation, we used a momentum of 0.9, a batch size of 128, a dropout of 0.2, and batch normalization. For training schedule, we trained the network for 100 epochs and used an initial learning rate of 0.1, which was divided by 5 at 50% and 75% of the toral number of epochs. 
+In our paper, for the evaluation, we used a *momentum* of 0.9, a *batch size* of 128, a *dropout* of 0.2, and *batch normalization*. For training schedule, we trained the network for *100 epochs* and used an *initial learning rate* of 0.1, which was divided by 5 at 50% and 75% of the toral number of epochs. 
 As for the algorithm hyperparameters, we fied *restart* to 2 and used the best uncertainty *threshold epsilon* = 0.05, *history length q* = 15, which were obtained using the grid search (See Section 4.5 in our paper).
 
 ## 6. Performance
