@@ -76,13 +76,16 @@ In our paper, for the evaluation, we used a *momentum* of 0.9, a *batch size* of
 As for the algorithm hyperparameters, we fied *restart* to 2 and used the best uncertainty *threshold epsilon* = 0.05, *history length q* = 15, which were obtained using the grid search (See Section 4.5 in our paper).
 
 ## 6. Performance
-#### 6.1 Synthetic Noise (CIFAR-10/100, Tiny-ImageNet datasets)
-- When using DenseNet (L=25, k=12)
+#### 6.1 Synthetic Noise (CIFAR-10/100, Tiny-ImageNet)
+- Trained DenseNet (L=25, k=12) with varying noise rates.
 
 
-- When using VGG-19
+- Trained VGG-19 with varying noise rates 
 
-#### 6.2 Realistic Noise (ANIMAL-10N dataset)
+#### 6.2 Realistic Noise (ANIMAL-10N)
+- Trained DenseNet (L=25, k=12) and VGG-19.
+- The noise rate of ANIMAL-10N is about 8% (See Appendix B in our paper).
+
 
 ## 7. How to Run
 
