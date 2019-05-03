@@ -141,5 +141,5 @@ We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The deta
 [3] Chang et al., 2017, Active Bias: Training more accurate neural networks by emphasizing high variance samples. In NIPS.</br>
 [4] Han et al., 2018, Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS.</br>
 
-## 9. Contact
+## 9. Contact Info
 Hwanjun Song (songhwanjun@kaist.ac.kr); Minseok Kim (minseokkim@kaist.ac.kr); Jae-gil Lee (jaegil@kaist.ac.kr)
