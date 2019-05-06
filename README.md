@@ -26,7 +26,7 @@ We compared **SELFIE** with default and two state-of-the-art robust training met
 - *Co-teaching* [4]: [official (Pytorch)](https://github.com/bhanML/Co-teaching) and [unofficial (Tensorflow)](https://github.com/songhwanjun/Co-teaching)
 
 ## 3. Benchmark Datasets
-We evaluated the performance of **SELIFE** on *four* benchmark datasets. Here, ANIMAL-10N data set is our proprietary real-world noisy data set of human-labled online images for 10 confusing animals.
+We evaluated the performance of **SELIFE** on *four* benchmark datasets. Here, ANIMAL-10N data set is our proprietary real-world noisy dataset of human-labled online images for 10 confusing animals. Please note that, in ANIMAL-10N, noisy labels were injected *naturally* by human mistakes, where its noise rate was estimated at *8%*.
 
 | Name (clean or noisy)    | # Training Images | # Testing Images  | # Classes |  Resolution |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:----------:|:-------:|
