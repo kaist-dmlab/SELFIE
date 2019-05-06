@@ -129,7 +129,7 @@ We trained DenseNet (L=25, k=12) and VGG-19 on the four benchmark datasets. The 
 
 - Detail of log file
    ```
-   log.csv: generally, it saves training loss/acc and test loss acc.
+   log.csv: generally, it saves training loss/error and test loss/error.
     - format : epoch, training loss, training error, test loss, test error
    However, Coteaching uses two network, so format is slightly different.
     - format : epoch, training loss (network1), training error (notwork1), training loss (network2), training error (network2), test loss (notwork1), test error (network1), test loss (network2), test error (network2)
