@@ -98,7 +98,7 @@ We trained DenseNet (L=25, k=12) and VGG-19 on the four benchmark datasets. The 
    ```
 - Algorithm parameters
    ```
-    -gpu_id: gpu number which you want to use.
+    -gpu_id: gpu number which you want to use (only support single gpu).
     -data: directory name of dataset.
     -model_name: model in {VGG-19, DenseNet-10-12, DenseNet-25-12, DenseNet-40-12}.
     -method_name: method in {Default, ActiveBias, Coteaching, SELFIE}.
