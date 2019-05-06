@@ -87,7 +87,7 @@ We trained DenseNet (L=25, k=12) and VGG-19 on the four benchmark datasets. The 
 #### 6.2 Real-World Noise (ANIMAL-10N)
 - The noise rate of ANIMAL-10N is estimated at 8%.
 <p align="center">
-<img src="figures/realworld_evaluation.png " width="420"> 
+<img src="figures/realistic_evaluation.png " width="420"> 
 </p>
 
 ## 7. How to Run
