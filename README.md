@@ -65,7 +65,7 @@ Except ANIMAL-10N dataset, since all datasets are clean, we artifically corrupte
 <img src="figures/noise_type.png " width="550"> 
 </p>
 
-As for **realistically noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B).
+As for **real-world noisy** ANIMAL-10N dataset, the noise rate of training data is found at **8%** by the corss-validation with grid search (See Appendix B).
 
 ## 5. Environment and Configuration
 - Python 3.6.4
