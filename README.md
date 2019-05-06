@@ -76,7 +76,7 @@ In our paper, for the evaluation, we used a *momentum* of 0.9, a *batch size* of
 As for the algorithm hyperparameters, we fixed *restart* to 2 and used the best uncertainty threshold *epsilon* = 0.05, history length *q* = 15, which were obtained using the grid search (See Section 4.5 in our paper).
 
 ## 6. Performance
-We trained DenseNet (L=25, k=12) and VGG-19 on four benchmark datasets. The detailed anaysis on the evalutaion is discussed in our paper.
+We trained DenseNet (L=25, k=12) and VGG-19 on the four benchmark datasets. The detailed anaysis on the evalutaion is discussed in our paper.
 
 #### 6.1 Synthetic Noise (CIFAR-10/100, Tiny-ImageNet)
 - DenseNet (L=25, k=12) on varying noise rates.
