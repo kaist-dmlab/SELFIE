@@ -172,7 +172,6 @@ def selfie(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_bounda
                     # self online correction mechanism
                     training(sess, total_epochs-warm_up, batch_size, train_batch_patcher, test_batch_patcher, trainer, warm_up, method=method, noise_rate=noise_rate, correcter=correcter, training_log=training_log)
 
-                    # update noise ratio for next iteration
                     correcter.predictions_clear()
                 ##############################################################################
 
