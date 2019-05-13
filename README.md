@@ -30,9 +30,9 @@ We evaluated the performance of **SELIFE** on *four* benchmark datasets. Here, A
 
 | Name (clean or noisy)    | # Training Images | # Testing Images  | # Classes |  Resolution |  Link   |
 | :------------: | :---------------: | :---------------: |:---------:|:----------:|:-------:|
-| CIFAR-10 (clean)       | 50,000            | 10,000            | 10        |    32x32   | [link](https://drive.google.com/open?id=1ipishY18dUv7aopE36gicbNYhk9E9nHx) |
+| CIFAR-10 (clean)       | 50,000            | 10,000            | 10        |    32x32   | [link](https://drive.google.com/a/dm.kaist.ac.kr/file/d/1ipishY18dUv7aopE36gicbNYhk9E9nHx/view?usp=sharing) |
 | CIFAR-100 (clean)     | 50,000            | 10,000            | 100       |    32x32   | [link](https://drive.google.com/a/dm.kaist.ac.kr/file/d/1vhYTpKzD4Y64SkcQgoMfHOg03ZgavwRw/view?usp=sharing) |
-| Tiny-ImageNet (clean) | 100,000           | 10,000            | 200       |    64x64   | [link](https://drive.google.com/open?id=1tR-fW1htexV-H9kMmpIQfF-KNZJFB7ZB) |
+| Tiny-ImageNet (clean) | 100,000           | 10,000            | 200       |    64x64   | [link](https://drive.google.com/a/dm.kaist.ac.kr/file/d/1tR-fW1htexV-H9kMmpIQfF-KNZJFB7ZB/view?usp=sharing) |
 | ANIMAL-10N (noisy) | 50,000           | 5,000            | 10       |    64x64   | [link](https://dm.kaist.ac.kr/datasets/animal-10n) |
 
 For ease of experimentation, we provide download links for all datasets converted to the binary version. 
