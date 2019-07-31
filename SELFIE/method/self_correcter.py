@@ -113,6 +113,10 @@ class Correcter(object):
                     self.loaded_data[id].corrected = True
                     self.loaded_data[id].last_corrected_label = self.corrected_labels[id]
                 #########################################################################
+            
+            #reuse
+            elif self.corrected_labels[id] != -1:
+                corrected_batch.append(id, image, self.corrected_labels[id])
 
         return corrected_batch
 
