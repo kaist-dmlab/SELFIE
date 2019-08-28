@@ -131,7 +131,7 @@ class Correcter(object):
             final_batch.append(corrected_batch.ids[i], corrected_batch.images[i], corrected_batch.labels[i])
 
         # Merge with clean batch
-        # If clean sample is included in clean_batch and corrected_batch at the same time, then the samples in corrected_batch is chosen.
+        # If clean samples are included in both clean_batch and corrected_batch, then the samples in corrected_batch are chosen.
         for i in range(len(clean_batch.ids)):
             if clean_batch.ids[i] in corrected_batch_ids:
                 continue
