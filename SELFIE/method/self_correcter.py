@@ -90,10 +90,6 @@ class Correcter(object):
             for key, value in accumulator.items():
                 p_dict[key] = float(value) / float(self.queue_size)
 
-            # based on variance
-            #var = np.var(p_dict)
-            #correctability = var + (var * var) / (float(self.queue_size) - 1.0)
-
             # based on entropy
             negative_entropy = 0.0
             for i in range(len(p_dict)):
@@ -103,7 +99,6 @@ class Correcter(object):
                     negative_entropy += p_dict[i] * np.log(p_dict[i])
             certainty = - negative_entropy / self.max_certainty
 
-            #if certainty <= self.threshold and not self.loaded_data[id].corrected:
             if certainty <= self.threshold:
                 self.corrected_labels[id] = np.argmax(p_dict)
                 corrected_batch.append(id, image, self.corrected_labels[id])
