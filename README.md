@@ -5,6 +5,9 @@
 
 Official tensorflow implementation of **SELFIE**. Specifically, in this implementation, we tested the performance of **SELFIE** using two popular convolutional neural networks, [DenseNet [1]](http://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.html) and [VGGNet [2]](https://arxiv.org/abs/1409.1556), on not only three simulated noisy datasets but also a real-world dataset. [*Active Bias* [3]](http://papers.nips.cc/paper/6701-active-bias-training-more-accurate-neural-networks-by-emphasizing-high-variance-samples) and [*Co-teaching* [4]](http://papers.nips.cc/paper/8072-co-teaching-robust-training-of-deep-neural-networks-with-extremely-noisy-labels), which are the two state-of-the-art robust training methods, were compared with **SELFIE**.
 
+## **Bug Report** 
+After fixing some bug, it has been reported that the performance of SELFIE based on uploaded code is slightly differnt to that in our paper. It will be corrected within 1 week. Thanks.
+
 ## 1. Overview
 Owing to the extremely high expressive power of deep neural networks, their side effect is to totally memorize training data even when the labels are extremely noisy. To overcome overfitting on the noisy labels, we propose a novel robust training method, which we call **SELFIE**, that trains the network on precisely calibrated samples together with clean samples. As in below Figure, it *selectively* corrects the losses of the training samples classified as *refurbishable* and combines them with the losses of clean samples to propagate backward. Taking advantage of this design, **SELFIE** effectively prevents the risk of noise accumulation from the false correction and fully exploits the training data.
 
