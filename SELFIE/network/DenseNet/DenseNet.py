@@ -4,6 +4,8 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import tensorflow as tf
 from network.DenseNet.utils import *
 from tensorpack import *
+from tensorpack.tfutils.symbolic_functions import *
+from tensorpack.tfutils.summary import *
 from tensorpack.models.batch_norm import *
 weight_decay = 0.0005
 
@@ -17,6 +19,11 @@ class DenseNet(object):
         self.scope = scope
 
         [height, width, channels] = image_shape
+        
+        #####
+        height = 32
+        width = 32
+        ####
         
         train_batch_shape = [None, height, width, channels]
 

@@ -21,6 +21,11 @@ class DenseNet(object):
         [height, width, channels] = image_shape
         train_batch_shape = [None, height, width, channels]
 
+        #####
+        height = 32
+        width = 32
+        ####
+
         with tf.variable_scope(self.scope):
             self.train_image_placeholder = tf.placeholder(
                 tf.float32,

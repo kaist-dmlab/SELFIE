@@ -20,6 +20,8 @@ class Trainer(object):
         self.test_xentropy_op = None
         self.test_prob_op = None
 
+# default smoothness = 0.2
+
 def training(sess, training_epochs, batch_size, train_batch_patcher, validation_batch_patcher, trainer, cur_epoch, method, sampler, training_log=None):
 
     for epoch in range(training_epochs):
@@ -63,7 +65,7 @@ def training(sess, training_epochs, batch_size, train_batch_patcher, validation_
         if training_log is not None:
             training_log.append(str(epoch + cur_epoch + 1) + ", " + str(cur_lr) + ", " + str(avg_train_loss) + ", " + str(1.0 - avg_train_acc) + ", " + str(avg_val_loss) + ", " + str(1.0 - avg_val_acc))
 
-def active_bias(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_boundaries, lr_values, optimizer_type, noise_rate, noise_type, warm_up, smoothness=0.02, log_dir="log"):
+def active_bias(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_boundaries, lr_values, optimizer_type, noise_rate, noise_type, warm_up, smoothness=0.2, log_dir="log"):
 
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
@@ -72,6 +74,7 @@ def active_bias(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_b
 
     # log list
     training_log = []
+    training_log.append("epcoh, learning rate, training loss, training error, test loss, test error\n")
 
     num_train_images = input_reader.num_train_images
     num_test_images = input_reader.num_val_images
@@ -94,7 +97,7 @@ def active_bias(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_b
         with tf.device('/gpu:' + str(gpu_id)):
             with tf.Session(config = config) as sess:
                 train_ids, train_images, train_labels = input_reader.data_read(batch_size, train = True)
-                test_ids, test_images, test_labels = input_reader.data_read(batch_size, train = False)
+                train_ids, test_images, test_labels = input_reader.data_read(batch_size, train = False)
 
                 if model_type == "DenseNet-25-12":
                     model = DenseNet(25, 12, image_shape, num_label)
@@ -118,13 +121,13 @@ def active_bias(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_b
                 train_batch_patcher.bulk_load_in_memory(sess, train_ids, train_images, train_labels)
                 test_batch_patcher.bulk_load_in_memory(sess, test_ids, test_images, test_labels)
 
-                # noise injection
+                # give noise on data set
                 train_batch_patcher.set_noise(noise_rate, noise_type)
 
                 ######################## main methodology for training #######################
                 sess.run(trainer.init_op)
-
                 # warm-up
+                train_batch_patcher.print_transition_matrix(train_batch_patcher.get_current_noise_matrix(entire=True))
                 training(sess, warm_up, batch_size, train_batch_patcher, test_batch_patcher, trainer, 0, method="warm-up", sampler=sampler, training_log=training_log)
 
                 # active learning (sample loss re-weighting)
@@ -139,3 +142,5 @@ def active_bias(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_b
     for text in training_log: 
         f.write(text + "\n")
     f.close()
+
+

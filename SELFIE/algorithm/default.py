@@ -61,6 +61,7 @@ def default(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_bound
 
     # log list
     training_log = []
+    training_log.append("epcoh, learning rate, training loss, training error, test loss, test error\n")
 
     num_train_images = input_reader.num_train_images
     num_test_images = input_reader.num_val_images
@@ -104,13 +105,13 @@ def default(gpu_id, input_reader, model_type, total_epochs, batch_size, lr_bound
                 train_batch_patcher.bulk_load_in_memory(sess, train_ids, train_images, train_labels)
                 test_batch_patcher.bulk_load_in_memory(sess, test_ids, test_images, test_labels)
 
-                # noise injection
+                # give noise on data set
                 train_batch_patcher.set_noise(noise_rate, noise_type)
 
                 ######################## main methodology for training #######################
                 sess.run(trainer.init_op)
 
-                #train_batch_patcher.print_transition_matrix(train_batch_patcher.get_current_noise_matrix(entire=True))
+                train_batch_patcher.print_transition_matrix(train_batch_patcher.get_current_noise_matrix(entire=True))
                 training(sess, total_epochs, batch_size, train_batch_patcher, test_batch_patcher, trainer, 0, method, training_log=training_log)
                 ##############################################################################
 

@@ -4,20 +4,18 @@ from structure.minibatch import *
 from structure.sample import *
 
 class Correcter(object):
-    def __init__(self, size_of_data, num_of_classes, queue_size, threshold, loaded_data=None):
+    def __init__(self, size_of_data, num_of_classes, history_length, threshold, loaded_data=None):
         self.size_of_data = size_of_data
         self.num_of_classes = num_of_classes
-        self.queue_size = queue_size
+        self.history_length = history_length
         self.threshold = threshold
 
         # prediction histories of samples
         self.all_predictions = {}
         for i in range(size_of_data):
-            self.all_predictions[i] = np.zeros(queue_size, dtype=int)
+            self.all_predictions[i] = np.zeros(history_length, dtype=int)
 
-        # Max Correctablility
-        max_variance = (float(self.num_of_classes) - 1.0) / (float(self.num_of_classes) * float(self.num_of_classes))
-        self.max_correctability = max_variance + max_variance * max_variance / (float(queue_size) - 1.0)
+        # Max predictive uncertainty
         self.max_certainty = -np.log(1.0/float(self.num_of_classes))
 
         # Corrected label map
@@ -37,10 +35,11 @@ class Correcter(object):
             id = ids[i]
             predicted_label = np.argmax(softmax_matrix[i])
             # append the predicted label to the prediction matrix
-            cur_index = self.update_counters[id] % self.queue_size
+            cur_index = self.update_counters[id] % self.history_length
             self.all_predictions[id][cur_index] = predicted_label
             self.update_counters[id] += 1
 
+    # low-loss separation
     def separate_clean_and_unclean_samples(self, ids, images, labels, loss_array, noise_rate):
         clean_batch = MiniBatch()
         unclean_batch = MiniBatch()
@@ -68,10 +67,10 @@ class Correcter(object):
 
         return clean_batch, unclean_batch
 
-    def get_corrected_samples(self, ids, images):
+    def get_refurbishable_samples(self, ids, images):
         corrected_batch = MiniBatch()
 
-        # check correctability for each sample
+        # check predictive uncertainty
         accumulator = {}
         for i in range(len(ids)):
             id = ids[i]
@@ -88,9 +87,9 @@ class Correcter(object):
 
             p_dict = np.zeros(self.num_of_classes, dtype=float)
             for key, value in accumulator.items():
-                p_dict[key] = float(value) / float(self.queue_size)
+                p_dict[key] = float(value) / float(self.history_length)
 
-            # based on entropy
+            # compute predictive uncertainty
             negative_entropy = 0.0
             for i in range(len(p_dict)):
                 if p_dict[i] == 0:
@@ -99,6 +98,8 @@ class Correcter(object):
                     negative_entropy += p_dict[i] * np.log(p_dict[i])
             certainty = - negative_entropy / self.max_certainty
 
+            ############### correspond to the lines 12--19 of the paper ################
+            # check refurbishable condition
             if certainty <= self.threshold:
                 self.corrected_labels[id] = np.argmax(p_dict)
                 corrected_batch.append(id, image, self.corrected_labels[id])
@@ -108,8 +109,10 @@ class Correcter(object):
                     self.loaded_data[id].corrected = True
                     self.loaded_data[id].last_corrected_label = self.corrected_labels[id]
                 #########################################################################
-            
-            #reuse
+
+            # reuse previously classified refurbishalbe samples
+            # As we tested, this part degraded the performance marginally around 0.3%p
+            # because uncertainty of the sample may afftect the performance
             elif self.corrected_labels[id] != -1:
                 corrected_batch.append(id, image, self.corrected_labels[id])
 
@@ -120,13 +123,13 @@ class Correcter(object):
         final_batch = MiniBatch()
         corrected_batch_ids = set()
 
-        # Add corrected batch
+        # add clean batch
         for i in range(len(corrected_batch.ids)):
             corrected_batch_ids.add(corrected_batch.ids[i])
             final_batch.append(corrected_batch.ids[i], corrected_batch.images[i], corrected_batch.labels[i])
 
-        # Merge with clean batch
-        # If clean samples are included in both clean_batch and corrected_batch, then the samples in corrected_batch are chosen.
+        # merge clean with refurbishable samples
+        # If a sample is included in clean_batch and refurbishable_batch at the same time, then the samples is treated as refurbishable
         for i in range(len(clean_batch.ids)):
             if clean_batch.ids[i] in corrected_batch_ids:
                 continue
@@ -139,14 +142,18 @@ class Correcter(object):
 
         return final_batch.ids, final_batch.images, final_batch.labels
 
-    def patch_clean_with_corrected_sample_batch(self, ids, images, labels, loss_array, noise_rate):
+    def patch_clean_with_refurbishable_sample_batch(self, ids, images, labels, loss_array, noise_rate):
         # 1. separate clean and unclean samples
-        clean_batch, unclean_batch = self.separate_clean_and_unclean_samples(ids, images, labels, loss_array,
-                                                                             noise_rate)
-        # 2. get corrected samples
-        corrected_batch = self.get_corrected_samples(ids, images)
+        clean_batch, unclean_batch = self.separate_clean_and_unclean_samples(ids, images, labels, loss_array, noise_rate)
+        # 2. get refurbishable samples
+        corrected_batch = self.get_refurbishable_samples(ids, images)
         # 3. merging
         return self.merge_clean_and_corrected_samples(clean_batch, corrected_batch)
+
+    def predictions_clear(self):
+        self.all_predictions.clear()
+        for i in range(self.size_of_data):
+            self.all_predictions[i] = np.zeros(self.history_length, dtype=int)
 
     def compute_new_noise_ratio(self):
         num_corrected_sample = 0
@@ -155,8 +162,3 @@ class Correcter(object):
                 num_corrected_sample += 1
 
         return 1.0 - float(num_corrected_sample) / float(self.size_of_data)
-
-    def predictions_clear(self):
-        self.all_predictions.clear()
-        for i in range(self.size_of_data):
-            self.all_predictions[i] = np.zeros(self.queue_size, dtype=int)

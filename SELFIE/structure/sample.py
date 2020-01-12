@@ -1,3 +1,8 @@
+import numpy as np
+import time, os, math, operator, statistics, sys
+import tensorflow as tf
+from random import Random
+
 class Sample(object):
     def __init__(self, id, image, true_label):
         # image id
